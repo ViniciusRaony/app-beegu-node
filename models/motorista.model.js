@@ -1,19 +1,13 @@
-const {DataTypes} = require("sequelize");
+const {DataTypes, Model} = require("sequelize");
 
 const db = require('../server')
 
-const Morotista = db.sequelize.define("motoristas", {
+const Motorista = db.sequelize.define("motoristas", {
    cnh: {
      type: DataTypes.STRING,
      allowNull: false
    }
 });
-
-Morotista.hasMany(Carona);
-
-Motorista.belongsTo(Veiculo);
-
-Motorista.belongsTo(Usuario);
 
 Motorista.sync().then(() => {
    console.log('Motorista table created successfully!');
@@ -21,4 +15,4 @@ Motorista.sync().then(() => {
    console.error('Unable to create table : ', error);
 });
 
-module.exports = Morotista;
+module.exports = Motorista;

@@ -13,10 +13,6 @@ const Rota = db.sequelize.define("rotas", {
    }
 });
 
-Rota.belongsTo(Carona);
-
-Rota.belongsToMany(Usuario, { through: 'historicoUsuario' });
-
 Rota.sync().then(() => {
    console.log('Rota table created successfully!');
 }).catch((error) => {

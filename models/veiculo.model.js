@@ -1,6 +1,6 @@
 const {DataTypes} = require("sequelize");
 
-const db = require('../server')
+const db = require('../server');
 
 const Veiculo = db.sequelize.define("veiculos", {
    placa: {

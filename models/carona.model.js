@@ -1,9 +1,6 @@
 const {DataTypes} = require("sequelize");
 
 const db = require('../server');
-const { createPool } = require("mysql2");
-const Passageiro = require("./passageiro.model");
-const Rota = require("./rota.model");
 
 const Carona = db.sequelize.define("caronas", {
    horario: {
@@ -19,12 +16,6 @@ const Carona = db.sequelize.define("caronas", {
      allowNull: false
    }
 });
-
-Carona.belongsTo(Motorista);
-
-Carona.belongsToMany(Passageiro);
-
-Carona.hasMany(Rota);
 
 Carona.sync().then(() => {
    console.log('Carona table created successfully!');
