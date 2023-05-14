@@ -1,0 +1,27 @@
+{
+  "name": "app-beegu-node",
+  "version": "1.0.0",
+  "description": "beegu backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinhocesar/app-beegu-node.git"
+  },
+  "keywords": [
+    "beegu"
+  ],
+  "author": "pinhocesar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinhocesar/app-beegu-node/issues"
+  },
+  "homepage": "https://github.com/pinhocesar/app-beegu-node#readme",
+  "dependencies": {
+    "mysql2": "^3.3.1",
+    "sequelize": "^6.31.1",
+    "tedious": "^16.0.0"
+  }
+}
