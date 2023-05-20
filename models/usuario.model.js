@@ -31,16 +31,6 @@ const Usuario = db.sequelize.define("usuarios", {
   timestamps: false // Desabilitar as colunas createdAt e updatedAt
 });
 
-// Relacionamento 1 para 1 Usuario - Motorista | FK MotoristaId está em Usuario
-Motorista.hasOne(Usuario); 
-Usuario.belongsTo(Motorista);
-
-// Relacionamento 1 para 1 Usuario - Passageiro | FK PassageiroId está em Usuario
-Passageiro.hasOne(Usuario);
-Usuario.belongsTo(Passageiro);
-
-// Usuario.belongsToMany(Rota, { through: 'historicoUsuario' });
-
 Usuario.sync().then(() => {
    console.log('Usuario table created successfully!');
 }).catch((error) => {
