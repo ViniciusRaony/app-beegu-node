@@ -8,6 +8,8 @@ const Motorista = db.sequelize.define("motoristas", {
      type: DataTypes.STRING,
      allowNull: false
    }
+}, {
+ timestamps: false // Desabilitar as colunas createdAt e updatedAt
 });
 
 // Relacionamento 1 para 1 Usuario - Motorista | FK UsuarioId está em Motorista
