@@ -15,6 +15,8 @@ const Veiculo = db.sequelize.define("veiculos", {
      type: DataTypes.STRING,
      allowNull: false
    }
+}, {
+  timestamps: false // Desabilitar as colunas createdAt e updatedAt
 });
 
 Veiculo.sync().then(() => {

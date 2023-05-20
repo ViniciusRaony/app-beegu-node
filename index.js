@@ -5,8 +5,9 @@ const sequelize = require('./server');
 const Usuario = require('./models/usuario.model');
 const Passageiro = require('./models/passageiro.model');
 const Motorista = require('./models/motorista.model');
-// const Carona = require('./models/carona.model');
-// const Veiculo = require('./models/veiculo.model');
-// const Rota = require('./models/rota.model');
-// const historicoUsuario = require('./models/historicoUsuario.model');
+const Carona = require('./models/carona.model');
+const Veiculo = require('./models/veiculo.model');
+const Rota = require('./models/rota.model');
+const PassageiroCarona = require('./models/PassageiroCarona.model');
+const historicoUsuario = require('./models/historicoUsuario.model');
 
