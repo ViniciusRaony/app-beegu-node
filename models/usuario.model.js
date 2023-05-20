@@ -1,8 +1,6 @@
 const {DataTypes} = require("sequelize");
 
 const db = require('../server');
-const Motorista = require("./motorista.model");
-const Passageiro = require("./passageiro.model");
 
 const Usuario = db.sequelize.define("usuarios", {
    id: { 
