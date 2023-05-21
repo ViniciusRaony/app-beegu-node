@@ -9,10 +9,10 @@ const {
   usuarioUpdate,
 } = require("../controllers/usuario.controller");
 
-router.route("/cadastro").post(usuarioCreate);
-router.route("/cadastro").get(usuarioGetAll);
-router.route("/cadastro/:id").put(usuarioUpdate);
-router.route("/cadastro/:id").delete(usuarioDelete);
-router.route("/cadastro/:id").get(usuarioGetById);
+router.route("/").post(usuarioCreate);
+router.route("/").get(usuarioGetAll);
+router.route("/:id").put(usuarioUpdate);
+router.route("/:id").delete(usuarioDelete);
+router.route("/:id").get(usuarioGetById);
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const {DataTypes} = require("sequelize");
 
 const db = require('../server');
+const Veiculo = require("./veiculo.model");
 
 const Usuario = db.sequelize.define("usuarios", {
    id: { 
@@ -28,6 +29,10 @@ const Usuario = db.sequelize.define("usuarios", {
 }, {
   timestamps: false // Desabilitar as colunas createdAt e updatedAt
 });
+
+// Relacionamento 1 para 1 Usuario - Veiculo | FK VeiculoId está em Usuário
+Veiculo.hasOne(Usuario);
+Usuario.belongsTo(Veiculo);
 
 Usuario.sync().then(() => {
    console.log('Usuario table created successfully!');

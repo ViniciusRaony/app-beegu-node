@@ -2,11 +2,11 @@ const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
  'beegu_db',
- 'root',
- 'teste',
+ 'sa',
+ '1q2w3e4r@#$',
   {
     host: 'localhost',      
-    dialect: 'mysql'
+    dialect: 'mssql'
   }
 );
 

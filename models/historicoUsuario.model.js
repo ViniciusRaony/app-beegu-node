@@ -5,6 +5,11 @@ const Usuario = require("./usuario.model")
 const Rota = require("./rota.model")
 
 const historicoUsuario = db.sequelize.define("historicoUsuarios", {
+  id: { 
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+   },
    dataCarona: {
      type: DataTypes.DATE,
      allowNull: false
