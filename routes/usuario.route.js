@@ -1,5 +1,7 @@
 const express = require("express");
 
+const authService = require('../services/auth.service')
+
 const router = express.Router();
 const {
   usuarioCreate,
@@ -9,7 +11,7 @@ const {
   usuarioUpdate,
 } = require("../controllers/usuario.controller");
 
-router.route("/").post(usuarioCreate);
+router.route("/", authService.authorize).post(usuarioCreate);
 router.route("/").get(usuarioGetAll);
 router.route("/:id").put(usuarioUpdate);
 router.route("/:id").delete(usuarioDelete);
