@@ -11,9 +11,5 @@ const {
 
 router.route("/criar-carona", authService.authorize).post(caronaCreate);
 router.route("/pedir-carona", authService.authorize).post(caronaJoin);
-// router.route("/home").post(usuarioGetAll);
-// router.route("/cadastro/:id").put(usuarioUpdate);
-// router.route("/cadastro/:id").delete(usuarioDelete);
-// router.route("/cadastro/:id").get(usuarioGetById);
 
 module.exports = router;
