@@ -1,8 +1,7 @@
 const {DataTypes} = require("sequelize");
 
 const db = require('../server');
-const Motorista = require("./motorista.model");
-const Passageiro = require("./passageiro.model");
+const Veiculo = require("./veiculo.model");
 
 const Usuario = db.sequelize.define("usuarios", {
    id: { 
@@ -31,15 +30,9 @@ const Usuario = db.sequelize.define("usuarios", {
   timestamps: false // Desabilitar as colunas createdAt e updatedAt
 });
 
-// Relacionamento 1 para 1 Usuario - Motorista | FK MotoristaId está em Usuario
-Motorista.hasOne(Usuario); 
-Usuario.belongsTo(Motorista);
-
-// Relacionamento 1 para 1 Usuario - Passageiro | FK PassageiroId está em Usuario
-Passageiro.hasOne(Usuario);
-Usuario.belongsTo(Passageiro);
-
-// Usuario.belongsToMany(Rota, { through: 'historicoUsuario' });
+// Relacionamento 1 para 1 Usuario - Veiculo | FK VeiculoId está em Usuário
+Veiculo.hasOne(Usuario);
+Usuario.belongsTo(Veiculo);
 
 Usuario.sync().then(() => {
    console.log('Usuario table created successfully!');
