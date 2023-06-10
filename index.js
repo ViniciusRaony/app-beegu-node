@@ -9,7 +9,7 @@ const Carona = require('./models/carona.model');
 const Veiculo = require('./models/veiculo.model');
 const Rota = require('./models/rota.model');
 const usuarioCarona = require('./models/usuarioCarona.model');
-const PassageiroCarona = require('./models/PassageiroCarona.model');
+// const PassageiroCarona = require('./models/PassageiroCarona.model');
 const historicoUsuario = require('./models/historicoUsuario.model');
 
 const express = require("express");
