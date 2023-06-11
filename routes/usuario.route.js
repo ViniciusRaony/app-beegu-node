@@ -13,7 +13,7 @@ const {
 } = require("../controllers/usuario.controller");
 
 
-router.route("/", authService.authorize).post(usuarioCreate);
+router.route("/").post(usuarioCreate);
 router.route("/").get(usuarioGetAll);
 router.route("/:id").put(usuarioUpdate);
 router.route("/:id").delete(usuarioDelete);

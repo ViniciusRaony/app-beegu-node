@@ -3,10 +3,10 @@ const Usuario = require('../models/usuario.model'); // Importe o modelo Usuario
 // Create - Cria um novo usuário
 exports.usuarioCreate = async (req, res) => {
   try {
-    const { nome, email, senha, telefone } = req.body;
+    const { nome, telefone } = req.body;
     
     // Crie um novo usuário no banco de dados
-    const usuario = await Usuario.create({ nome, email, senha, telefone });
+    const usuario = await Usuario.create({ nome, telefone });
     
     res.status(201).json(usuario);
   } catch (error) {
@@ -43,7 +43,7 @@ exports.usuarioGetById = async (req, res) => {
 // Update - Atualiza um usuário pelo ID
 exports.usuarioUpdate = async (req, res) => {
   try {
-    const { nome, email, senha, telefone } = req.body;
+    const { nome, telefone } = req.body;
     
     const usuario = await Usuario.findByPk(req.params.id);
     
@@ -53,8 +53,6 @@ exports.usuarioUpdate = async (req, res) => {
     
     // Atualize os campos do usuário
     usuario.nome = nome;
-    usuario.email = email;
-    usuario.senha = senha;
     usuario.telefone = telefone;
     
     await usuario.save();

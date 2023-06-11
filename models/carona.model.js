@@ -14,13 +14,13 @@ const Carona = db.sequelize.define("caronas", {
      type: DataTypes.INTEGER,
      allowNull: false
    },
-   status: {
-     type: DataTypes.BOOLEAN,
-     allowNull: true
+   enderecoInicial: {
+     type: DataTypes.STRING,
+     allowNull: false,    
    },
-   ehMotorista: {
-    type: DataTypes.BOOLEAN,
-    allowNull: true
+   enderecoFinal: {
+     type: DataTypes.STRING,
+     allowNull: false,
    },
 }, {
   timestamps: false // Desabilitar as colunas createdAt e updatedAt

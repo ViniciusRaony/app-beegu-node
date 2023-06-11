@@ -8,8 +8,8 @@ exports.usuarioValidar = async (req, res) => {
     try {
         const usuario = await Usuario.findOne({
             where: {
-                email: req.body.email,
-                senha: req.body.senha + config.SALT_KEY
+                nome: req.body.email,
+                telefone: req.body.telefone
             }
         });
 
