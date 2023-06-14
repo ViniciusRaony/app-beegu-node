@@ -97,7 +97,9 @@ exports.caronaCreate = async(req, res) =>  {
 // Read - Obtém todos as caronas
 exports.caronaGetAll = async (req, res) => {
   try {
-    const caronas = await Carona.findAll();
+    const caronas = await Carona.findAll({
+      order: [['createdAt', 'DESC']]
+    });
     
     res.json(caronas);
   } catch (error) {
