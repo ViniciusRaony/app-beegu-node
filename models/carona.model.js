@@ -23,7 +23,7 @@ const Carona = db.sequelize.define("caronas", {
      allowNull: false,
    },
 }, {
-  timestamps: false // Desabilitar as colunas createdAt e updatedAt
+  timestamps: true // Desabilitar as colunas createdAt e updatedAt
 });
 
 // Relacionamento 1 para muitos Carona - Motorista | FK MotoristaId está em Carona

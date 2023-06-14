@@ -15,15 +15,15 @@ exports.usuarioCreate = async (req, res) => {
 };
 
 // Read - Obtém todos os usuários
-exports.usuarioGetAll = async (req, res) => {
-  try {
-    const usuarios = await Usuario.findAll();
+// exports.usuarioGetAll = async (req, res) => {
+//   try {
+//     const usuarios = await Usuario.findAll();
     
-    res.json(usuarios);
-  } catch (error) {
-    res.status(500).json({ error: 'Erro ao obter usuários' });
-  }
-};
+//     res.json(usuarios);
+//   } catch (error) {
+//     res.status(500).json({ error: 'Erro ao obter usuários' });
+//   }
+// };
 
 // Read - Obtém um usuário pelo ID
 exports.usuarioById = async (req, res) => {
@@ -43,7 +43,7 @@ exports.usuarioById = async (req, res) => {
 
 
 // Read - Obtém um usuário pelo ID
-exports.usuarioGetLast = async (req, res) => {
+exports.usuarioGetAll = async (req, res) => {
   try {
     const usuario = await Usuario.findOne({
       order: [['createdAt', 'DESC']], // Ordena por createdAt em ordem decrescente     
