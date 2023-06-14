@@ -53,7 +53,7 @@ exports.usuarioGetLast = async (req, res) => {
       return res.status(404).json({ error: 'Nenhum usuário encontrado' });
     }
 
-    res.json({ nome: usuario.nome });
+    res.json(usuario);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao obter o último usuário inserido' });
   }
