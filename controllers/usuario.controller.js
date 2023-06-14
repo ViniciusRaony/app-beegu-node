@@ -26,7 +26,24 @@ exports.usuarioGetAll = async (req, res) => {
 };
 
 // Read - Obtém um usuário pelo ID
-exports.usuarioGetById = async (req, res) => {
+exports.usuarioById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const usuario = await Usuario.findByPk(id);
+
+    if (!usuario) {
+      return res.status(404).json({ error: 'Nenhum usuário encontrado' });
+    }
+
+    res.json({ nome: usuario.nome });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao obter o usuário pelo ID' });
+  }
+};
+
+
+// Read - Obtém um usuário pelo ID
+exports.usuarioGetLast = async (req, res) => {
   try {
     const usuario = await Usuario.findOne({
       order: [['createdAt', 'DESC']], // Ordena por createdAt em ordem decrescente     

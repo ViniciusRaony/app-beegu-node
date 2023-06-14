@@ -11,7 +11,7 @@ const Carona = db.sequelize.define("caronas", {
      allowNull: false
    },
    vagas: {
-     type: DataTypes.INTEGER,
+     type: DataTypes.STRING,
      allowNull: false
    },
    enderecoInicial: {
