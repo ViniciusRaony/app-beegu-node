@@ -5,7 +5,7 @@ const UsuarioCarona = require('../models/usuarioCarona.model'); // Importe o mod
 
 // Controller para criar carona
 exports.caronaCreate = async(req, res) =>  {
-  const { horario, vagas, enderecoInicial, enderecoFinal } = req.body;
+  const { horario, vagas, enderecoInicial, enderecoFinal, createdAt, updatedAt  } = req.body;
 
   console.log('Valor do campo horario recebido do corpo da requisição:', horario);
 
@@ -33,6 +33,8 @@ exports.caronaCreate = async(req, res) =>  {
       vagas,
       enderecoInicial,
       enderecoFinal,
+      createdAt,
+      updatedAt,
     }); 
 
     // Crie a entrada na tabela de junção UsuarioCarona
