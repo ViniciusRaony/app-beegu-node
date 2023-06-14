@@ -15,7 +15,7 @@ const {
 
 
 router.route("/").post(usuarioCreate);
-// router.route("/").get(usuarioGetAll);
+router.route("/").get(usuarioGetAll);
 // router.route("/:id").put(usuarioUpdate);
 // router.route("/:id").delete(usuarioDelete);
 // router.route("/:id").get(usuarioGetById);
