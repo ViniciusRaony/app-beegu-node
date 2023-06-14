@@ -27,7 +27,7 @@ const Usuario = db.sequelize.define("usuarios", {
      allowNull: false
    },
 }, {
-  timestamps: false // Desabilitar as colunas createdAt e updatedAt
+  timestamps: true // Desabilitar as colunas createdAt e updatedAt
 });
 
 // Relacionamento 1 para 1 Usuario - Veiculo | FK VeiculoId está em Usuário
