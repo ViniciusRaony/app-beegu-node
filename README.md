@@ -66,7 +66,7 @@ Criação do backend do Beegu - Projeto de Carona Compoartilhada.
 
 - Rota ```/api/v1/carona/pedir-carona``` (método ```POST```): Cria uma solicitação de carona.
 
-- Rota ```api/v1/login``` (método ```POST```): Validar o cadastro de um usuário
+- Rota ```api/v1/login``` (método ```POST```): Validar o cadastro de um usuário.
 
 
 ### Links úteis
