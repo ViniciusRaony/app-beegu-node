@@ -39,7 +39,7 @@ Criação do backend do Beegu - Projeto de Carona Compoartilhada.
 
 - Execute a aplicação:
  
-  ```$ npm index.js```
+  ```$ node index.js```
 
 - URL para acessar servidor local:
 
